@@ -1,5 +1,7 @@
 const notes = require("../db/db.json");
 const fs = require("fs");
+// const {v4: uuidv4} = require("uuid");
+const uuidv4 = require('uuid').v4;
 
 module.exports = function(app) {
 
