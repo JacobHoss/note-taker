@@ -1,27 +1,8 @@
-const jsdom = require('jsdom');
-$ = require('jquery')(new jsdom.JSDOM().window);
-
-const express = require("express");
-
 const $noteTitle = $(".note-title");
 const $noteText = $(".note-textarea");
 const $saveNoteBtn = $(".save-note");
 const $newNoteBtn = $(".new-note");
 const $noteList = $(".list-container .list-group");
-
-// Tells node that we are creating an "express" server
-const app = express();
-
-// Sets an initial port. We"ll use this later in our listener
-const PORT = process.env.PORT || 3010;
-
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-// requiring our routes for API data and HTML files
-// require("./routes/apiRoutes")(app);
-require("../routes/htmlRoutes")(app);
 
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
@@ -168,10 +149,3 @@ $noteText.on("keyup", handleRenderSaveBtn);
 
 // Gets and renders the initial list of notes
 getAndRenderNotes();
-
-// LISTENER
-// The below code effectively "starts" our server
-
-app.listen(PORT, function() {
-  console.log("App listening on PORT: " + PORT);
-});
