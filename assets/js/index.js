@@ -103,9 +103,13 @@ const handleRenderSaveBtn = function () {
 
 // Render's the list of note titles
 const renderNoteList = (notes) => {
-  if (typeof notes === 'Array') {
+  console.log("rendering notes!")
+  console.log(notes);
+  console.log(typeof notes);
+  console.log(notes instanceof Array )
+  if (typeof notes === 'object') {
 
-
+    console.log("typeof notes is Array")
     $noteList.empty();
 
     const noteListItems = [];
