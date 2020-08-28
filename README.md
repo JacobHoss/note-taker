@@ -1,7 +1,7 @@
 # Note Taker
   
   ## Description:
-  This project uses ES6 Javascript classes, Node, and Inquirer to generate a professional HTML webpage for a Software-Engineer team. 
+    This project is a node server based Heroku app! Use it to take notes and stay organized!
    
   ## Table of Contents:
   * [Installation](#installation)
